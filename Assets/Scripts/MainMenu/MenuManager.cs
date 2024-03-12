@@ -44,7 +44,7 @@ public class MainMenuManger : MonoBehaviour
 
     public void OnClickOptions()
     {
-        ClickMenu.Play();
+        //ClickMenu.Play();
         menuOptions.SetActive(true);
 
 
@@ -54,7 +54,7 @@ public class MainMenuManger : MonoBehaviour
 
     public void OnClickExit()
     {
-        ClickMenu.Play();
+        //ClickMenu.Play();
         menuOptions.SetActive(false);
         menuCredits.SetActive(false);
     }
@@ -62,6 +62,8 @@ public class MainMenuManger : MonoBehaviour
 
     public void OnClickCredits()
     {
+        menuCredits.SetActive(true);
+
 
         ////Animator Credits
         //Animator animator_Credits = Background.GetComponent<Animator>();
@@ -104,7 +106,7 @@ public class MainMenuManger : MonoBehaviour
 
     public void OnClickQuit()
     {
-        ClickMenu.Play();
+        //ClickMenu.Play();
         Application.Quit();
     }
 
