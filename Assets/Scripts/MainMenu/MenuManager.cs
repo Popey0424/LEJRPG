@@ -30,7 +30,7 @@ public class MainMenuManger : MonoBehaviour
 
     public void OnClickPlay()
     {
-        ClickMenu.Play();
+        //ClickMenu.Play();
         imageFade.gameObject.SetActive(true);
         imageFade.DOFade(1, 2.9f).OnComplete(FadeComplete);
 
