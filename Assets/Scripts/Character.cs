@@ -26,6 +26,9 @@ public class Character : MonoBehaviour
     private void Start()
     {
         Life = LifeMax;
+        //PlayerPrefs.SetString("CharacaterID", "Warrior,Mage");
+        //"Warrior,Mage".Split(',');
+
     }
     public bool isAlive()
     {

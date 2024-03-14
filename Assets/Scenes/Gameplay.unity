@@ -1535,6 +1535,7 @@ MonoBehaviour:
   OutlineMaterial: {fileID: 2100000, guid: 52b7d285b7929e349a84c985ccb2824a, type: 2}
   DefaultMaterial: {fileID: 2100000, guid: 53c8ece3ab093ff44a530c8b3f30df75, type: 2}
   UI: {fileID: 1806575489}
+  CurrentSelectionMode: 0
   SelectionInstructionsTexts:
   - SelectionMode: 0
     SelectionInstructionsText: Please select an ally to select their actions or an
@@ -1588,6 +1589,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _allies: []
+  _enemies:
+  - {fileID: 0}
 --- !u!1 &1902940923
 GameObject:
   m_ObjectHideFlags: 0
