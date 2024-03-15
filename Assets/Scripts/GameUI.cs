@@ -11,13 +11,18 @@ public class GameUI : MonoBehaviour
     public TMPro.TextMeshProUGUI InstructionText;
     public GameObject ActionsButtonsParent;
     private GameObject _lifeParent;
+    
     private void Start()
     {
         _lifeParent = LifeValue.transform.parent.gameObject;
     }
     private void ShowInstructionText(string instructionText="")
     {
+
+       
         ShowHUD(true, false, instructionText);
+    
+
     }
     private void ShowCharacterHUD(bool isAlly = false)
     {
@@ -46,4 +51,6 @@ public class GameUI : MonoBehaviour
         LifeValue.text = $"{character.Life}/{character.LifeMax}";
         LifeFiller.fillAmount = (float)character.Life / (float)character.LifeMax;
     }
+
+    
 }
