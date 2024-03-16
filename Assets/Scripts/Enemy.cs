@@ -16,6 +16,11 @@ public class Enemy : Character
         CharacterAnimator.SetTrigger("hit");
         
         Life = Mathf.Clamp(Life - damage, 0, LifeMax);
+
+        if (Life == 0)
+        {
+            Debug.Log("MORT");
+        }
        
     }
 

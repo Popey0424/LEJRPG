@@ -70,6 +70,7 @@ public class TurnManager : MonoBehaviour
             foreach (Ally ally in _allies) { ally.HasAttackedThisTurnOrIsStuned = false; }
         }
         print(res ? "This is the end of the allies' turn !" : "You can attack with at least another ally.");
+        StartCoroutine(NextTurn());
         return res;
     }
     private bool EnemiesHaveEndedTheirTurn()
@@ -81,8 +82,16 @@ public class TurnManager : MonoBehaviour
             SelectionManager.Instance.CurrentSelectionMode = SelectionMode.Default; _isEnemiesTurn = false;
             foreach (Enemy enemy in _enemies) { enemy.HasAttackedThisTurnOrIsStuned = false; }
         }
+        StartCoroutine(NextTurn());
         return res;
     }
 
-    
+    IEnumerator NextTurn()
+    {
+        yield return new WaitForSeconds(3);
+
+    }
+
+
+
 }

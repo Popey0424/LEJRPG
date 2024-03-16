@@ -10,6 +10,7 @@ public class Character : MonoBehaviour
     public SpriteRenderer Visual;
     public Animator CharacterAnimator;
     public int NormalAttackDamage = 10;
+    public int HighAttackDamage = 50;
     public Color CanAttackColor = Color.white;
     public Color StandByColor = Color.grey;
     private bool _hasAttackedThisTurnOrIsStuned = false;
@@ -43,6 +44,9 @@ public class Character : MonoBehaviour
 
         if (defender.GetType() == typeof(Ally)) ((Ally)defender).Hit(damage: NormalAttackDamage);
         else if (defender.GetType() == typeof(Enemy)) ((Enemy)defender).Hit(damage: NormalAttackDamage);
+
+        if (defender.GetType() == typeof(Ally)) ((Ally)defender).Hit(damage: HighAttackDamage);
+        else if (defender.GetType() == typeof(Enemy)) ((Enemy)defender).Hit(damage: HighAttackDamage);
     }
     virtual internal void Hit(int damage)
     {
