@@ -83,4 +83,6 @@ public class TurnManager : MonoBehaviour
         }
         return res;
     }
+
+    
 }
