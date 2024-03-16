@@ -18,4 +18,19 @@ public class Enemy : Character
         Life = Mathf.Clamp(Life - damage, 0, LifeMax);
        
     }
+
+    private void EnemyDie()
+    {
+
+    }
+
+    //private void NextMonster()
+    //{
+    //    _currentMonster = (_currentMonster + 1);
+    //}
+
+    public bool IsAlive()
+    {
+        return Life > 0;
+    }
 }
