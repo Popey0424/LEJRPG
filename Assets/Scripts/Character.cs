@@ -10,10 +10,11 @@ public class Character : MonoBehaviour
     public SpriteRenderer Visual;
     public Animator CharacterAnimator;
     public int NormalAttackDamage = 10;
-    public int HighAttackDamage = 50;
+
     public Color CanAttackColor = Color.white;
     public Color StandByColor = Color.grey;
     private bool _hasAttackedThisTurnOrIsStuned = false;
+    public int Mana = 1;
     public bool HasAttackedThisTurnOrIsStuned
     {
         get { return _hasAttackedThisTurnOrIsStuned; }
@@ -35,6 +36,11 @@ public class Character : MonoBehaviour
     {
         return Life > 0;
     }
+
+    public bool HaveMana()
+    {
+        return Mana > 0;
+    }
     virtual internal void Attack(Character defender)
     {
         print($"{name} is attacking {defender.name} of type {defender.GetType()}");
@@ -45,8 +51,7 @@ public class Character : MonoBehaviour
         if (defender.GetType() == typeof(Ally)) ((Ally)defender).Hit(damage: NormalAttackDamage);
         else if (defender.GetType() == typeof(Enemy)) ((Enemy)defender).Hit(damage: NormalAttackDamage);
 
-        if (defender.GetType() == typeof(Ally)) ((Ally)defender).Hit(damage: HighAttackDamage);
-        else if (defender.GetType() == typeof(Enemy)) ((Enemy)defender).Hit(damage: HighAttackDamage);
+        
     }
     virtual internal void Hit(int damage)
     {

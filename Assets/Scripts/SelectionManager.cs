@@ -17,7 +17,7 @@ public class SelectionManager : MonoBehaviour
     public GameUI UI;
     public SelectionMode CurrentSelectionMode;
     public List<SelectionInstructions> SelectionInstructionsTexts;
-    public int Mana = 1;
+    
 
     public void Update()
     {
@@ -73,20 +73,5 @@ public class SelectionManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void SetSuperAttackMode()
-    {
-        if (Mana > 0)
-        {
-            
-            if (_selectedCharacter == null || _selectedCharacter.GetType() == typeof(Enemy)) return;
-            CurrentSelectionMode = SelectionMode.EnemyToAttack;
-            UI.UpdateUI(instructionText: GetSelectionInstructionsText(CurrentSelectionMode));
-
-        }
-        else
-        {
-            Debug.Log("PAS ASSEZ DE MANA");
-        }
-        
-    }
+   
 }
