@@ -2,11 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TurnManager : MonoBehaviour
 {
     private static TurnManager _instance;
+    public TextMeshProUGUI WIN;
     public static TurnManager Instance { get { return _instance; } }
     private void Awake()
     {
@@ -34,6 +37,10 @@ public class TurnManager : MonoBehaviour
             {
                 AttackRandomAlly(enemy);
             }
+        }
+        if (_enemies.Count == 0)
+        {
+            StartCoroutine(KO());
         }
     }
 
@@ -102,6 +109,25 @@ public class TurnManager : MonoBehaviour
         }
     }
 
+    public void RemoveEnemy(Enemy enemy)
+    {
+        if (_enemies.Contains(enemy))
+        {
+            _enemies.Remove(enemy);
+        }
+    }
+    IEnumerator KO()
+    {
+        WIN.gameObject.SetActive(true);
+        yield return new WaitForSeconds(3);
+        ChangeScene();
+        
+    }
+
+    private void ChangeScene()
+    {
+        SceneManager.LoadScene("NextBattle");
+    }
 
 
 }

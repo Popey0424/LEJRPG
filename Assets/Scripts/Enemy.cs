@@ -11,6 +11,8 @@ public class Enemy : Character
     public Canvas Canvas;
     public GameObject PrefabHitPoint;
     public CameraShake cameraShake;
+    public GameObject PrefabKO;
+    
     internal override void Attack(Character defender)
     {
         if (HasAttackedThisTurnOrIsStuned) return;
@@ -32,14 +34,28 @@ public class Enemy : Character
 
         if (Life == 0)
         {
-            Debug.Log("MORT");
+
+
+            GameObject Go = GameObject.Instantiate(PrefabKO, Canvas.transform);
+            Go.transform.localPosition = UnityEngine.Random.insideUnitCircle * 100;
+            Go.transform.DOLocalMoveY(150, 0.8f);
+            Go.GetComponent<Text>().DOFade(0, 0.8f);
+            GameObject.Destroy(Go, 0.8f);
+            StartCoroutine(EnemyDeathDelay());
+            
+           
+            
+            
+
         }
        
     }
 
-    private void EnemyDie()
+    private IEnumerator EnemyDeathDelay()
     {
-
+        yield return new WaitForSeconds(1f);                 
+        Destroy(gameObject);       
+        TurnManager.Instance.RemoveEnemy(this);
     }
 
     //private void NextMonster()
@@ -51,4 +67,6 @@ public class Enemy : Character
     {
         return Life > 0;
     }
+
+
 }
