@@ -7,6 +7,8 @@ public class CharacterSelected : MonoBehaviour
     public GameObject joueur1SpawnPoint;
     public GameObject joueur2SpawnPoint;
 
+   
+
     public GameObject warriorPrefab;
     public GameObject magePrefab;
     public GameObject oldwarriorPrefab;
@@ -56,7 +58,7 @@ public class CharacterSelected : MonoBehaviour
         // Instanciez le prefab du joueur au point de spawn
         if (playerPrefab != null && spawnPoint != null)
         {
-            Instantiate(playerPrefab, spawnPoint.transform.position, Quaternion.identity);
+            Instantiate(playerPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation, spawnPoint.transform);
         }
         else
         {

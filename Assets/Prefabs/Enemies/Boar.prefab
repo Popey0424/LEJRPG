@@ -179,7 +179,7 @@ Animator:
   m_GameObject: {fileID: 1950870479929545827}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 438ba5fcd16e7d844b6ee5bde99885c3, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9253e6398b25fbf4e9a5cddf985f7957, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -290,3 +290,7 @@ MonoBehaviour:
   NormalAttackDamage: 10
   CanAttackColor: {r: 1, g: 1, b: 1, a: 1}
   StandByColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  Mana: 1
+  Canvas: {fileID: 0}
+  PrefabHitPoint: {fileID: 0}
+  cameraShake: {fileID: 0}

@@ -5,11 +5,31 @@ using UnityEngine.SceneManagement;
 using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 using DG.Tweening;
+using TMPro;
 
 public class SelectionMenu : MonoBehaviour
 {
     public GameObject TheChoiceOne; 
     public GameObject TheChoiceTwo;
+    
+    
+    public TMP_Text WarriorText;
+    public TMP_Text OldWarriorText;
+    public TMP_Text MageText;
+    public TMP_Text PaladinText;
+    
+    public TMP_Text WizzardText;
+
+
+
+    public TMP_Text WarriorText2;
+    public TMP_Text OldWarriorText2;
+    public TMP_Text MageText2;
+    public TMP_Text PaladinText2;
+    
+    public TMP_Text WizzardText2;
+
+
 
     public Sprite Warrior;
     public Sprite OldWarrior;
@@ -63,11 +83,23 @@ public class SelectionMenu : MonoBehaviour
     {
         if (choiceOne == true)
         {
+            WarriorText.gameObject.SetActive(true);
+            OldWarriorText.gameObject.SetActive(false);
+            WizzardText.gameObject.SetActive(false);
+            MageText.gameObject.SetActive(false);
+            PaladinText.gameObject.SetActive(false);
+
             TheChoiceOne.gameObject.GetComponent<Image>().sprite = Warrior;
             _firstChoice = "Warrior";
         }
         if (choiceTwo == true)
         {
+            WarriorText2.gameObject.SetActive(true);
+            OldWarriorText2.gameObject.SetActive(false);
+            WizzardText2.gameObject.SetActive(false);
+            MageText2.gameObject.SetActive(false);
+            PaladinText2.gameObject.SetActive(false);
+
             TheChoiceTwo.gameObject.GetComponent<Image>().sprite = Warrior;
             _secondChoice = "Warrior";
         }
@@ -77,11 +109,23 @@ public class SelectionMenu : MonoBehaviour
     {
         if(choiceOne == true)
         {
+            WarriorText.gameObject.SetActive(false);
+            OldWarriorText.gameObject.SetActive(false);
+            WizzardText.gameObject.SetActive(true);
+            MageText.gameObject.SetActive(false);
+            PaladinText.gameObject.SetActive(false);
+
             TheChoiceOne.gameObject.GetComponent<Image>().sprite = Wizzard;
             _firstChoice = "Wizzard";
         }
         if(choiceTwo == true)
         {
+            WarriorText2.gameObject.SetActive(false);
+            OldWarriorText2.gameObject.SetActive(false);
+            WizzardText2.gameObject.SetActive(true);
+            MageText2.gameObject.SetActive(false);
+            PaladinText2.gameObject.SetActive(false);
+
             TheChoiceTwo.gameObject.GetComponent<Image>().sprite = Wizzard;
             _secondChoice = "Wizzard";
         }
@@ -91,12 +135,24 @@ public class SelectionMenu : MonoBehaviour
     {
         if (choiceOne == true)
         {
+            WarriorText.gameObject.SetActive(false);
+            OldWarriorText.gameObject.SetActive(false);
+            WizzardText.gameObject.SetActive(false);
+            MageText.gameObject.SetActive(true);
+            PaladinText.gameObject.SetActive(false);
+
             TheChoiceOne.gameObject.GetComponent<Image>().sprite = Mage;
             _firstChoice = "Mage";
 
         }
         if (choiceTwo == true)
         {
+            WarriorText2.gameObject.SetActive(false);
+            OldWarriorText2.gameObject.SetActive(false);
+            WizzardText2.gameObject.SetActive(false);
+            MageText2.gameObject.SetActive(true);
+            PaladinText2.gameObject.SetActive(false);
+
             TheChoiceTwo.gameObject.GetComponent<Image>().sprite = Mage;
             _secondChoice = "Mage";
         }
@@ -106,11 +162,23 @@ public class SelectionMenu : MonoBehaviour
     {
         if(choiceOne == true)
         {
+            WarriorText.gameObject.SetActive(false);
+            OldWarriorText.gameObject.SetActive(true);
+            WizzardText.gameObject.SetActive(false);
+            MageText.gameObject.SetActive(false);
+            PaladinText.gameObject.SetActive(false);
+
             TheChoiceOne.gameObject.GetComponent<Image>().sprite = OldWarrior;
             _firstChoice = "OldWarrior";
         }
         if (choiceTwo == true)
         {
+            WarriorText2.gameObject.SetActive(false);
+            OldWarriorText2.gameObject.SetActive(true);
+            WizzardText2.gameObject.SetActive(false);
+            MageText2.gameObject.SetActive(false);
+            PaladinText2.gameObject.SetActive(false);
+
             TheChoiceTwo.gameObject.GetComponent<Image>().sprite = OldWarrior;
             _secondChoice = "OldWarrior";
         }
@@ -120,11 +188,23 @@ public class SelectionMenu : MonoBehaviour
     {
         if (choiceOne == true)
         {
+            WarriorText.gameObject.SetActive(false);
+            OldWarriorText.gameObject.SetActive(false);
+            WizzardText.gameObject.SetActive(false);
+            MageText.gameObject.SetActive(false);
+            PaladinText.gameObject.SetActive(true);
+
             TheChoiceOne.gameObject.GetComponent<Image>().sprite = Paladin;
             _firstChoice = "Paladin"; 
         }
         if (choiceTwo == true)
         {
+            WarriorText2.gameObject.SetActive(false);
+            OldWarriorText2.gameObject.SetActive(false);
+            WizzardText2.gameObject.SetActive(false);
+            MageText2.gameObject.SetActive(false);
+            PaladinText2.gameObject.SetActive(true);
+
             TheChoiceTwo.gameObject.GetComponent<Image>().sprite = Paladin;
             _secondChoice = "Paladin";
         }
