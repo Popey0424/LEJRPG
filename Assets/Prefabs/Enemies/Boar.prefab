@@ -282,8 +282,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d321471d8c27aa4d967f4db51023b79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LifeMax: 100
-  Life: 100
+  LifeMax: 20
+  Life: 20
   SpritePortrait: {fileID: 3800871404644214177, guid: aae616819c34de14996632200276507c, type: 3}
   Visual: {fileID: 4806747013749786892}
   CharacterAnimator: {fileID: 7871772636983983911}
@@ -294,3 +294,4 @@ MonoBehaviour:
   Canvas: {fileID: 0}
   PrefabHitPoint: {fileID: 0}
   cameraShake: {fileID: 0}
+  PrefabKO: {fileID: 0}

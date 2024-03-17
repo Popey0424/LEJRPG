@@ -18,6 +18,7 @@ public class CharacterSelected : MonoBehaviour
 
     public TurnManager turnManager;
     
+    
 
     private void Start()
     {
@@ -69,8 +70,10 @@ public class CharacterSelected : MonoBehaviour
         if (playerPrefab != null && spawnPoint != null)
         {
             GameObject playerInstance = Instantiate(playerPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation, spawnPoint.transform);
+           
+           
 
-            // Ajoutez le personnage à la liste _allies du TurnManager
+           
             if (turnManager != null)
             {
                 Ally allyComponent = playerInstance.GetComponent<Ally>();

@@ -844,8 +844,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 926301507}
-  - component: {fileID: 926301508}
   - component: {fileID: 926301509}
+  - component: {fileID: 926301510}
   m_Layer: 0
   m_Name: _scrpit
   m_TagString: Untagged
@@ -868,21 +868,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &926301508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 926301505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35b330b585fedad4a8a455d7bf31a4c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animationToPlay: {fileID: 1580583602}
-  imageFade: {fileID: 1300970626}
-  delayAfterAnimation: 3
 --- !u!114 &926301509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -903,6 +888,22 @@ MonoBehaviour:
   bowmanPrefab: {fileID: 3755213925575692453, guid: 7618a40834e9b0a46b2c9afb01a8aba8, type: 3}
   WizzardPrefab: {fileID: 8610249979593843233, guid: ac73dc3f50cf02046866ac89cf9f89d9, type: 3}
   PaladinPrefab: {fileID: 1188024478885519304, guid: d454125b540ccb9468e7b087e17ceead, type: 3}
+  turnManager: {fileID: 0}
+--- !u!114 &926301510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926301505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df31179200aac014ab72672b93b10527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationToPlay: {fileID: 1580583602}
+  imageFade: {fileID: 1300970626}
+  delayAfterAnimation: 3
 --- !u!4 &1006870322 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6023984604789025341, guid: 1c83de57c44ae5e4e9632e36671b9e1a, type: 3}

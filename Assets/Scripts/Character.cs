@@ -50,6 +50,7 @@ public class Character : MonoBehaviour
         CharacterAnimator.SetTrigger("attack");
 
         TurnManager.Instance.HasAttacked(this);
+        
 
         if (defender.GetType() == typeof(Ally)) ((Ally)defender).Hit(damage: NormalAttackDamage);
         else if (defender.GetType() == typeof(Enemy)) ((Enemy)defender).Hit(damage: NormalAttackDamage);

@@ -1,19 +1,18 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using TMPro;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using DG.Tweening;
 
-public class TurnManager : MonoBehaviour
+public class BossBattleTurnManager : MonoBehaviour
 {
-    private static TurnManager _instance;
+    private static BossBattleTurnManager _instance;
     public TextMeshProUGUI WIN;
     public Image Fade;
-    public static TurnManager Instance { get { return _instance; } }
+    public static BossBattleTurnManager Instance { get { return _instance; } }
     private void Awake()
     {
         if (_instance == null) _instance = this;
@@ -45,7 +44,7 @@ public class TurnManager : MonoBehaviour
         {
             Debug.Log("PLUS DE MECHANT");
             StartCoroutine(KO());
-            
+
         }
     }
 
@@ -133,13 +132,13 @@ public class TurnManager : MonoBehaviour
     private void ChangeScene()
     {
         Fade.DOFade(1, 2.9f).OnComplete(FadeComplete);
-        
+
     }
     public void FadeComplete()
     {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex + 1);
+        SceneManager.LoadScene("EndScene");
     }
 
 
 }
+
