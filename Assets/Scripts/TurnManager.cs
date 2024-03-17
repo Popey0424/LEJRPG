@@ -23,6 +23,8 @@ public class TurnManager : MonoBehaviour
         _enemies = new List<Enemy>(FindObjectsByType<Enemy>(FindObjectsSortMode.InstanceID));
         foreach (Ally ally in _allies) { ally.HasAttackedThisTurnOrIsStuned = false; }
         foreach (Enemy enemy in _enemies) { enemy.HasAttackedThisTurnOrIsStuned = false; }
+
+
     }
     private void Update()
     {
@@ -90,6 +92,14 @@ public class TurnManager : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
 
+    }
+
+    public void AddAlly(Ally ally)
+    {
+        if (ally != null)
+        {
+            _allies.Add(ally);
+        }
     }
 
 

@@ -13,7 +13,11 @@ public class CharacterSelected : MonoBehaviour
     public GameObject magePrefab;
     public GameObject oldwarriorPrefab;
     public GameObject bowmanPrefab;
-    // Ajoutez les autres prefabs de personnages nécessaires
+    public GameObject WizzardPrefab;
+    public GameObject PaladinPrefab;
+
+    public TurnManager turnManager;
+    
 
     private void Start()
     {
@@ -34,7 +38,7 @@ public class CharacterSelected : MonoBehaviour
     {
         GameObject playerPrefab = null;
 
-        // Assignez le prefab correspondant au nom du personnage
+        
         switch (playerName)
         {
             case "Warrior":
@@ -49,16 +53,32 @@ public class CharacterSelected : MonoBehaviour
             case "Bowman":
                 playerPrefab = bowmanPrefab;
                 break;
-            // Ajoutez les autres cas pour les autres personnages
+            case "Wizzard":
+                playerPrefab = WizzardPrefab;
+                break;
+            case "Paladin":
+                playerPrefab = PaladinPrefab;
+                break;
+            
             default:
                 Debug.LogError("Personnage non reconnu : " + playerName);
                 break;
         }
 
-        // Instanciez le prefab du joueur au point de spawn
+
         if (playerPrefab != null && spawnPoint != null)
         {
-            Instantiate(playerPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation, spawnPoint.transform);
+            GameObject playerInstance = Instantiate(playerPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation, spawnPoint.transform);
+
+            // Ajoutez le personnage à la liste _allies du TurnManager
+            if (turnManager != null)
+            {
+                Ally allyComponent = playerInstance.GetComponent<Ally>();
+                if (allyComponent != null)
+                {
+                    turnManager.AddAlly(allyComponent);
+                }
+            }
         }
         else
         {
