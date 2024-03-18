@@ -30,7 +30,8 @@ public class MainMenuManger : MonoBehaviour
 
     public void OnClickPlay()
     {
-        //ClickMenu.Play();
+        
+        ClickMenu.Play();
         imageFade.gameObject.SetActive(true);
         imageFade.DOFade(1, 2.9f).OnComplete(FadeComplete);
 
@@ -39,12 +40,12 @@ public class MainMenuManger : MonoBehaviour
 
     private void FadeComplete()
     {
-        SceneManager.LoadScene("Gameplay");
+        SceneManager.LoadScene("SelectionMenu");
     }
 
     public void OnClickOptions()
     {
-        //ClickMenu.Play();
+        ClickMenu.Play();
         menuOptions.SetActive(true);
 
 
@@ -54,7 +55,7 @@ public class MainMenuManger : MonoBehaviour
 
     public void OnClickExit()
     {
-        //ClickMenu.Play();
+        ClickMenu.Play();
         menuOptions.SetActive(false);
         menuCredits.SetActive(false);
     }
@@ -106,7 +107,7 @@ public class MainMenuManger : MonoBehaviour
 
     public void OnClickQuit()
     {
-        //ClickMenu.Play();
+        ClickMenu.Play();
         Application.Quit();
     }
 
