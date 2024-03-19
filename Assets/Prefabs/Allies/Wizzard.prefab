@@ -223,7 +223,7 @@ Transform:
   - {fileID: 1381078995676814880}
   - {fileID: 2733522453962514001}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &3246276738037149507
 BoxCollider2D:
@@ -282,12 +282,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da7e7b2ba1709e43a538d907b530fe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LifeMax: 100
-  Life: 100
+  LifeMax: 20
+  Life: 20
   SpritePortrait: {fileID: 21300000, guid: cb4c79692003908498444723e420e708, type: 3}
   Visual: {fileID: 8142479613943555448}
   CharacterAnimator: {fileID: 2306630474303682412}
-  NormalAttackDamage: 10
+  NormalAttackDamage: 60
   CanAttackColor: {r: 1, g: 1, b: 1, a: 1}
   StandByColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Mana: 1

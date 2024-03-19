@@ -12,15 +12,18 @@ EditorBuildSettings:
     path: Assets/Scenes/SelectionMenu.unity
     guid: 248ec3ada7c85a84a948d7a67803f365
   - enabled: 1
-    path: Assets/Scenes/Gameplay.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/GetReadyForTheNextBattle.unity
     guid: f3e17081ed1d57249aac72155fa29948
+  - enabled: 1
+    path: Assets/Scenes/Gameplay.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/NextBattle.unity
     guid: 7493629b03de6464eb622c54ebf1bdba
   - enabled: 1
     path: Assets/Scenes/Gameplay 1.unity
     guid: 5c3b52a636d92fe4bb68a6be465c0ede
+  - enabled: 1
+    path: Assets/Scenes/WinScene.unity
+    guid: 6e274619caec6ea41bf58bdd16bd8aa1
   m_configObjects: {}

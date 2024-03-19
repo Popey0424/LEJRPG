@@ -903,6 +903,7 @@ MonoBehaviour:
   bowmanPrefab: {fileID: 3755213925575692453, guid: 7618a40834e9b0a46b2c9afb01a8aba8, type: 3}
   WizzardPrefab: {fileID: 8610249979593843233, guid: ac73dc3f50cf02046866ac89cf9f89d9, type: 3}
   PaladinPrefab: {fileID: 1188024478885519304, guid: d454125b540ccb9468e7b087e17ceead, type: 3}
+  turnManager: {fileID: 0}
 --- !u!4 &1006870322 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6023984604789025341, guid: 1c83de57c44ae5e4e9632e36671b9e1a, type: 3}
@@ -2027,15 +2028,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: GET READY FOR THE NEXT BATTLE
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a42a84fdb62687e46b0150fa16362485, type: 2}
+  m_sharedMaterial: {fileID: -877295448700174166, guid: a42a84fdb62687e46b0150fa16362485, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

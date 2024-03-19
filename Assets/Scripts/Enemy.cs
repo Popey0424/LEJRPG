@@ -57,7 +57,7 @@ public class Enemy : Character
         Destroy(gameObject);       
         TurnManager.Instance.RemoveEnemy(this);
     }
-
+        
     //private void NextMonster()
     //{
     //    _currentMonster = (_currentMonster + 1);

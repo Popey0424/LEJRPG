@@ -39,7 +39,7 @@ public class NextBattle : MonoBehaviour
 
     public void FadeComplete()
     {
-        SceneManager.LoadScene("Gameplay2");
+        SceneManager.LoadScene("Gameplay 1");
     }
 }
 
